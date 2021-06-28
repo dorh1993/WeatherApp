@@ -1,0 +1,20 @@
+    <form class="controls" [formGroup]="form">
+        <mat-form-field class="field">
+            <mat-select formControlName="cityName">
+                <mat-option value="" disabled>Select City</mat-option>
+                <mat-option *ngFor="let city of City" [value]="city">
+                    {{city}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field class="field">
+            <input matInput placeholder="Units (standard, metric, etc)" formControlName="unit">
+        </mat-form-field>
+        <button class="icon-wrapper" [disabled]="!form.valid" (click)="prepareToSendData()">
+            <mat-icon class="icon">add</mat-icon>
+        </button>
+    </form>
+    <div class="weather-data">
+    {{ data }} <img [src]="iconSrc" />
+    </div>
+

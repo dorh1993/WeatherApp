@@ -1,0 +1,23 @@
+.controls {
+  display: flex;
+  justify-content: space-around;
+  width: 600px;
+}
+
+.icon-wrapper {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.field {
+  width: 220px;
+}
+
+.weather-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

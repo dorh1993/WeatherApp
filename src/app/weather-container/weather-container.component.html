@@ -1,0 +1,17 @@
+<div class="wrapper">
+<div class="container">
+  <div class="title">Check Weather</div>
+  <div class="weather-container">
+    <app-weather (sendWeather)="saveWeather($event)"> </app-weather>
+    <div *ngFor="let weather of Weather; let i = index">
+        <app-weather (sendWeather)="saveWeather($event)"> </app-weather>
+    </div>
+  </div>
+  <div class="data-container">
+    Weather In:
+    <div *ngFor="let weather of Weather; let i = index">
+      <div>{{ i + 1 }}.&nbsp;{{ weather }}</div>
+    </div>
+  </div>
+</div>
+</div>
